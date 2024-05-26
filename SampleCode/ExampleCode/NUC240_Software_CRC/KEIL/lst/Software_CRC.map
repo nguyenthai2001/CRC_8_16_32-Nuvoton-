@@ -1,0 +1,206 @@
+Component: Arm Compiler for Embedded 6.21 Tool: armlink [5ec1fa00]
+
+==============================================================================
+
+Small function inlining results
+
+Inlined function __aeabi_idiv0 from idiv0.o at offset 0x160 in aeabi_sdiv.o(.text).
+Inlined Instruction: BX       lr
+Inlined function __aeabi_idiv0 from idiv0.o at offset 0xc in aeabi_sdiv_div0.o(.text).
+Inlined Instruction: BX       lr
+Inlined function __aeabi_idiv0 from idiv0.o at offset 0x176 in aeabi_sdiv_div0.o(.text).
+Inlined Instruction: BX       lr
+Inlined function __aeabi_idiv0 from idiv0.o at offset 0x18 in uidiv_div0.o(.text).
+Inlined Instruction: BX       lr
+Inlined function __aeabi_idiv0 from idiv0.o at offset 0x42 in idiv_div0.o(.text).
+Inlined Instruction: BX       lr
+Inlined total of 5 calls.
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000d5
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x000026e8, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000026bc, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000c0   Data   RO           21    RESET               startup_nuc230_240.o
+    0x000000c0   0x000000c0   0x00000000   Code   RO          219  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x000000c0   0x00000004   Code   RO          254    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x000000c4   0x00000004   Code   RO          257    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          259    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          261    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x000000c8   0x00000008   Code   RO          262    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          264    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          266    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000d0   0x000000d0   0x00000004   Code   RO          255    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d4   0x000000d4   0x0000004c   Code   RO           22  * .text               startup_nuc230_240.o
+    0x00000120   0x00000120   0x0000000e   Code   RO          224    .text               mc_p.l(strlen.o)
+    0x0000012e   0x0000012e   0x0000003e   Code   RO          270    .text               mc_p.l(uidiv_div0.o)
+    0x0000016c   0x0000016c   0x00000060   Code   RO          276    .text               mc_p.l(uldiv.o)
+    0x000001cc   0x000001cc   0x00000000   Code   RO          278    .text               mc_p.l(iusefp.o)
+    0x000001cc   0x000001cc   0x00000164   Code   RO          279    .text               mf_p.l(dadd.o)
+    0x00000330   0x00000330   0x000000d0   Code   RO          281    .text               mf_p.l(dmul.o)
+    0x00000400   0x00000400   0x000000f0   Code   RO          283    .text               mf_p.l(ddiv.o)
+    0x000004f0   0x000004f0   0x00000040   Code   RO          285    .text               mf_p.l(dfixul.o)
+    0x00000530   0x00000530   0x00000028   Code   RO          287    .text               mf_p.l(cdrcmple.o)
+    0x00000558   0x00000558   0x00000030   Code   RO          289    .text               mc_p.l(init.o)
+    0x00000588   0x00000588   0x00000020   Code   RO          291    .text               mc_p.l(llshl.o)
+    0x000005a8   0x000005a8   0x00000022   Code   RO          293    .text               mc_p.l(llushr.o)
+    0x000005ca   0x000005ca   0x00000026   Code   RO          295    .text               mc_p.l(llsshr.o)
+    0x000005f0   0x000005f0   0x000000be   Code   RO          297    .text               mf_p.l(depilogue.o)
+    0x000006ae   0x000006ae   0x00000002   PAD
+    0x000006b0   0x000006b0   0x00000038   Code   RO          127    .text.CLK_EnableModuleClock  clk.o
+    0x000006e8   0x000006e8   0x00000208   Code   RO          147    .text.CLK_EnablePLL  clk.o
+    0x000008f0   0x000008f0   0x00000018   Code   RO          153    .text.CLK_EnableXtalRC  clk.o
+    0x00000908   0x00000908   0x00000098   Code   RO            4    .text.CLK_GetPLLClockFreq  system_nuc230_240.o
+    0x000009a0   0x000009a0   0x0000009c   Code   RO          159    .text.CLK_GetPLLClockFreq  clk.o
+    0x00000a3c   0x00000a3c   0x000000a8   Code   RO          195    .text.CLK_GetPLLClockFreq  uart.o
+    0x00000ae4   0x00000ae4   0x00000124   Code   RO          145    .text.CLK_SetCoreClock  clk.o
+    0x00000c08   0x00000c08   0x00000070   Code   RO          149    .text.CLK_SetHCLK   clk.o
+    0x00000c78   0x00000c78   0x00000130   Code   RO          129    .text.CLK_SetModuleClock  clk.o
+    0x00000da8   0x00000da8   0x00000040   Code   RO          157    .text.CLK_WaitClockReady  clk.o
+    0x00000de8   0x00000de8   0x00000020   Code   RO           64    .text.HardFault_Handler  retarget.o
+    0x00000e08   0x00000e08   0x0000001c   Code   RO           60    .text.Hard_Fault_Handler  retarget.o
+    0x00000e24   0x00000e24   0x00000078   Code   RO           39    .text.SYS_Init      main.o
+    0x00000e9c   0x00000e9c   0x0000003c   Code   RO          108    .text.SYS_ResetModule  sys.o
+    0x00000ed8   0x00000ed8   0x00000024   Code   RO           45    .text.SYS_UnlockReg  main.o
+    0x00000efc   0x00000efc   0x00000010   Code   RO           68    .text.SendChar      retarget.o
+    0x00000f0c   0x00000f0c   0x00000044   Code   RO           66    .text.SendChar_ToUART  retarget.o
+    0x00000f50   0x00000f50   0x00000080   Code   RO            2    .text.SystemCoreClockUpdate  system_nuc230_240.o
+    0x00000fd0   0x00000fd0   0x00000002   Code   RO            6    .text.SystemInit    system_nuc230_240.o
+    0x00000fd2   0x00000fd2   0x00000002   PAD
+    0x00000fd4   0x00000fd4   0x0000001c   Code   RO           41    .text.UART0_Init    main.o
+    0x00000ff0   0x00000ff0   0x000000e8   Code   RO          193    .text.UART_Open     uart.o
+    0x000010d8   0x000010d8   0x00000078   Code   RO           33    .text.crc16         main.o
+    0x00001150   0x00001150   0x00000060   Code   RO           31    .text.crc16_by_table  main.o
+    0x000011b0   0x000011b0   0x0000004c   Code   RO           29    .text.crc32_by_table  main.o
+    0x000011fc   0x000011fc   0x00000082   Code   RO           37    .text.crc8          main.o
+    0x0000127e   0x0000127e   0x00000002   PAD
+    0x00001280   0x00001280   0x0000003c   Code   RO           35    .text.crc8_by_table  main.o
+    0x000012bc   0x000012bc   0x00000014   Code   RO           78    .text.fputc         retarget.o
+    0x000012d0   0x000012d0   0x00000148   Code   RO           43    .text.main          main.o
+    0x00001418   0x00001418   0x0000007c   Code   RO           62    .text.stackDump     retarget.o
+    0x00001494   0x00001494   0x00000020   Code   RO          227    i.__0printf         mc_p.l(printfa.o)
+    0x000014b4   0x000014b4   0x0000002e   Code   RO          299    i.__ARM_clz         mf_p.l(depilogue.o)
+    0x000014e2   0x000014e2   0x0000000e   Code   RO          303    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x000014f0   0x000014f0   0x00000002   Code   RO          304    i.__scatterload_null  mc_p.l(handlers.o)
+    0x000014f2   0x000014f2   0x0000000e   Code   RO          305    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00001500   0x00001500   0x00000174   Code   RO          234    i._fp_digits        mc_p.l(printfa.o)
+    0x00001674   0x00001674   0x000006ec   Code   RO          235    i._printf_core      mc_p.l(printfa.o)
+    0x00001d60   0x00001d60   0x00000020   Code   RO          236    i._printf_post_padding  mc_p.l(printfa.o)
+    0x00001d80   0x00001d80   0x0000002c   Code   RO          237    i._printf_pre_padding  mc_p.l(printfa.o)
+    0x00001dac   0x00001dac   0x00000100   Data   RO           48    .rodata.g_au32CRC16Htab  main.o
+    0x00001eac   0x00001eac   0x00000100   Data   RO           49    .rodata.g_au32CRC16Ltab  main.o
+    0x00001fac   0x00001fac   0x00000400   Data   RO           47    .rodata.g_au32CRC32tab  main.o
+    0x000023ac   0x000023ac   0x00000100   Data   RO           50    .rodata.g_au8CRC8tab  main.o
+    0x000024ac   0x000024ac   0x00000179   Data   RO           51    .rodata.str1.1      main.o
+    0x00002625   0x00002625   0x00000077   Data   RO           84    .rodata.str1.1      retarget.o
+    0x0000269c   0x0000269c   0x00000020   Data   RO          302    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x000026bc, Size: 0x0000002c, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x000026bc   0x00000004   Data   RW            9    .data.CyclesPerUs   system_nuc230_240.o
+    0x20000004   0x000026c0   0x00000004   Data   RW           10    .data.PllClock      system_nuc230_240.o
+    0x20000008   0x000026c4   0x00000004   Data   RW            8    .data.SystemCoreClock  system_nuc230_240.o
+    0x2000000c   0x000026c8   0x00000020   Data   RW           11    .data.gau32ClkSrcTbl  system_nuc230_240.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000030, Load base: 0x000026e8, Size: 0x00000408, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000030        -       0x00000004   Zero   RW           85    .bss.__stdout       retarget.o
+    0x20000034   0x000026e8   0x00000004   PAD
+    0x20000038        -       0x00000400   Zero   RW           19    STACK               startup_nuc230_240.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1528        120          0          0          0       6951   clk.o
+       994        112       2169          0          0       4521   main.o
+       288         44        119          0          4       3273   retarget.o
+        76         32        192          0       1024        764   startup_nuc230_240.o
+        60          8          0          0          0       2510   sys.o
+       282         32          0         44          0       2154   system_nuc230_240.o
+       400         36          0          0          0       6589   uart.o
+
+    ----------------------------------------------------------------------
+      3632        384       2512         44       1032      26762   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         4          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        48         10          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        32          0          0          0          0         68   llshl.o
+        38          0          0          0          0         68   llsshr.o
+        34          0          0          0          0         68   llushr.o
+      2252         98          0          0          0        412   printfa.o
+        14          0          0          0          0         60   strlen.o
+        62          0          0          0          0         72   uidiv_div0.o
+        96          0          0          0          0         84   uldiv.o
+        40          2          0          0          0         68   cdrcmple.o
+       356          4          0          0          0        140   dadd.o
+       240          6          0          0          0         84   ddiv.o
+       236          0          0          0          0        216   depilogue.o
+        64         10          0          0          0         68   dfixul.o
+       208          6          0          0          0         88   dmul.o
+
+    ----------------------------------------------------------------------
+      3772        144          0          0          0       1564   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      2626        116          0          0          0        900   mc_p.l
+      1144         28          0          0          0        664   mf_p.l
+
+    ----------------------------------------------------------------------
+      3772        144          0          0          0       1564   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      7404        528       2512         44       1032      27666   Grand Totals
+      7404        528       2512         44       1032      27666   ELF Image Totals
+      7404        528       2512         44          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 9916 (   9.68kB)
+    Total RW  Size (RW Data + ZI Data)              1076 (   1.05kB)
+    Total ROM Size (Code + RO Data + RW Data)       9960 (   9.73kB)
+
+==============================================================================
+
